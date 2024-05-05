@@ -24,20 +24,22 @@ def load():
         if not shotgun[temp]:
             shotgun[temp] = True
             live-=1
+    time.sleep(1)
     return shotgun
 
 def shoot(shotgun, entity, count):
     if shotgun[count]:
         print("The round is live.")
         time.sleep(1)
-        print("Remaining lives: " + str(entity-1))
+        print("Remaining lives: " + str(entity-1) + "\n")
         return entity - 1
     else:
         print("The round is blank.")
         time.sleep(1)
-        print("Remaining lives: " + str(entity))
+        print("Remaining lives: " + str(entity) + "\n")
         return entity
 
+sussy = 0
 count = 0
 shells = 0
 yourTurn = True
@@ -45,15 +47,18 @@ while dealer and player:
     if count == shells:
         shotgun = load()
         shells = len(shotgun)
+        count = 0
     if yourTurn:
         print("Choose. 0 to shoot yourself, 1 to shoot the dealer.")
         action = input()
         if action == "0":
             player = shoot(shotgun,player,count)
+            if not shotgun[count]:
+                yourTurn = not yourTurn
         elif action == "1":
             dealer = shoot(shotgun,dealer,count)
         else:
-            print("Invalid action, please re-enter:")
+            print("Invalid action, please re-enter.")
             continue
     else:
         time.sleep(1)
@@ -62,6 +67,8 @@ while dealer and player:
             print("Dealer choose: Shoot self.")
             time.sleep(1)
             dealer = shoot(shotgun,dealer,count)
+            if not shotgun[count]:
+                yourTurn = not yourTurn
         else:
             print("Dealer choose: Shoot YOU.")
             time.sleep(1)
