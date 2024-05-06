@@ -11,5 +11,5 @@ Original: https://store.steampowered.com/app/2835570/Buckshot_Roulette/
 - When the shells in the shotgun run out, they will be randomized and re-inserted again as mentioned above.
 - The game ends when the player or the dealer runs out of lives. The person who runs out of lives first loses.
 
-Dev Log:  
+# Dev Log:  
 5/5/2024: Barebones algorithm for a game of Buckshot Roulette.
