@@ -45,6 +45,7 @@ shells = 0
 yourTurn = True
 while dealer and player:
     if count == shells:
+        time.sleep(1)
         shotgun = load()
         shells = len(shotgun)
         count = 0
