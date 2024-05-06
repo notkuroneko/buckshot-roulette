@@ -3,7 +3,7 @@ Terminal Buckshot Roulette recreation for fun using Python.
 Original: https://store.steampowered.com/app/2835570/Buckshot_Roulette/  
 
 # Rules:  
-- The player and the dealer gets a random number of lives from 2 to 5.
+- When the game starts, the player and the dealer gets a random amount of lives from 2 to 5.
 - Each round, the shotgun is loaded with a random amount of shells from 2 to 8. The number of live and blank shells in that amount is also randomized, and will be inserted into the shotgun in a random order.
 - The player and the dealer takes turn pulling the trigger, either at themselves or their opponent. The player's choice is controlled by user input, while the dealer's choice is randomized (Future developments may include AI calculated dealer's choice, although taking into account my experience with the base game, this feature may have already been developped by the original creator. Again, this is a just-for-fun project.)
 - The person getting shot by a live round will lose a life, and the next turn goes to the person not holding the shotgun in the previous turn.
